@@ -44,18 +44,48 @@ print(headers)
 
 ### Generating a Random User Agent
 
-To get a random user agent string:
+To get a real and random user agent string:
 
 ```python
-from real_headers import random_user_agent
+from real_headers import real_user_agent
 
-user_agent = random_user_agent()
+user_agent = real_user_agent()
 print(user_agent)
 ```
 
 ### Example Output:
 ```
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
+```
+
+## Command Line Interface (CLI)
+
+After installing, you can also use the package directly from the command line.
+
+### To Display Complete Headers:
+
+```bash
+real-headers
+
+# Output
+{
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Cache-Control": "max-age=0",
+    "User-Agent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2 ( .NET CLR 3.0.04506.648)"
+}
+```
+
+### To Display Random User Agent:
+
+```bash
+real-user-agent
+
+# Output
+Mozilla/5.0 (X11; U; Linux i686; es-AR; rv:1.8.1.6) Gecko/20070803 Firefox/2.0.0.6 (Swiftfox)
 ```
 
 ## License

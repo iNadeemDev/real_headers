@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="real_headers",
-    version="0.1.0",
+    version="0.1.1",
     author="Muhammad Nadeem",
     author_email="nadeemdsb5@gmail.com",
     description="Real Headers is a Python library that generates random HTTP headers and browser fingerprints that mimic real browsers.",
@@ -14,7 +14,19 @@ setup(
     url="https://github.com/iNadeemDev/real_headers",
     packages=find_packages(),
     install_requires=[],
-    keywords=["headers", "user-agent", "browser", "fingerprint", "fake headers", "real headers", "request headers"],
+    project_urls={
+        "Source": "https://github.com/iNadeemDev/real_headers",
+    },
+    entry_points={
+        'console_scripts': [
+            'real_headers=real_headers.cli:show_headers',
+            'real-headers=real_headers.cli:show_headers',
+            'real_user_agent=real_headers.cli:show_user_agent',
+            'real-user-agent=real_headers.cli:show_user_agent',
+        ],
+    },
+    keywords=["headers", "user-agent", "browser", "fingerprint", "fake headers", "real headers", "request headers",
+              "http headers", "random headers", "realheaders"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
@@ -22,8 +34,9 @@ setup(
         "Programming Language :: Python :: 3",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Internet :: WWW/HTTP :: Browsers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=2.7",
 )

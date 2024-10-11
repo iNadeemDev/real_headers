@@ -17,7 +17,7 @@ def real_headers():
 
     return browser_headers
 
-def random_user_agent():
+def real_user_agent():
     """Return a random User-Agent string."""
     browser = get_random_browser()
     return random.choice(user_agents[browser])

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="real_headers",
-    version="0.1.1",
+    version="0.1.2",
     author="Muhammad Nadeem",
     author_email="nadeemdsb5@gmail.com",
     description="Real Headers is a Python library that generates random HTTP headers and browser fingerprints that mimic real browsers.",
